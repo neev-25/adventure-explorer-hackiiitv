@@ -8,9 +8,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ASSETS = os.path.join(ROOT, 'assets', 'images')
 
 IMAGE_MAP = {
-    'hero/home.jpg': 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&fit=crop',
-    'pages/about-hero.jpg': 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1920&fit=crop',
-    'pages/contact-hero.jpg': 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1920&fit=crop',
+    # Page wallpapers (home/about/contact) are original project images — do not download over them.
     'trips/brahmatal.jpg': 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&fit=crop',
     'trips/dalhousie-winter.jpg': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&fit=crop',
     'trips/kashmir-winter.jpg': 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&fit=crop',
