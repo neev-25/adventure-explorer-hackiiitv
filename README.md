@@ -44,9 +44,9 @@ Pushes to `main` publish the site to the `gh-pages` branch automatically.
 3. **Branch:** `gh-pages` → `/ (root)` → Save
 
 **Live URLs:**
-- Home: https://neev-25.github.io/adventure-explorer-hackiiitv/
-- About: https://neev-25.github.io/adventure-explorer-hackiiitv/about.html
-- Contact: https://neev-25.github.io/adventure-explorer-hackiiitv/contact.html
+- Home: https://neev-25.github/adventure-explorer-hackiiitv/
+- About: https://neev-25.github/adventure-explorer-hackiiitv/about.html
+- Contact: https://neev-25.github/adventure-explorer-hackiiitv/contact.html
 
 Primary pages: `index.html`, `about.html`, `contact.html`
 
