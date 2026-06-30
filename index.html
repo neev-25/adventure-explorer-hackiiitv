@@ -4,28 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adventure Explorer - Discover India's Hidden Gems</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">Adventure Explorer</a>
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="trips.html">Trips</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <button class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+<body data-page="home">
+    <div id="site-nav"></div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -79,132 +63,13 @@
     <section class="testimonials">
         <div class="container">
             <h2>What Our Travelers Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <img src="images/testimonial1.jpg" alt="Testimonial 1">
-                    <p>"The Himalayan trek was an unforgettable experience. The local guides were knowledgeable and the views were breathtaking."</p>
-                    <h4>Priya Sharma</h4>
-                    <span>Mumbai, India</span>
-                </div>
-                <div class="testimonial">
-                    <img src="images/testimonial2.jpg" alt="Testimonial 2">
-                    <p>"Kerala backwaters tour was magical. The houseboat experience and local village visits gave us a true taste of Kerala's culture."</p>
-                    <h4>Rajesh Patel</h4>
-                    <span>Delhi, India</span>
-                </div>
-                <div class="testimonial">
-                    <img src="images/testimonial3.jpg" alt="Testimonial 3">
-                    <p>"Rajasthan heritage tour was incredible. The forts, palaces, and desert safari exceeded our expectations."</p>
-                    <h4>Anita Desai</h4>
-                    <span>Bangalore, India</span>
-                </div>
-            </div>
+            <div class="testimonials-grid" id="home-testimonials-grid"></div>
         </div>
     </section>
 
-    <!-- Newsletter -->
-    <section class="newsletter">
-        <div class="container">
-            <h2>Stay Updated</h2>
-            <p>Subscribe to our newsletter for the latest adventure updates and special offers.</p>
-            <form id="newsletter-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
-        </div>
-    </section>
+    <div id="site-newsletter"></div>
+    <div id="site-footer"></div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>About Us</h3>
-                    <p>Adventure Explorer is your gateway to discovering India's most breathtaking destinations through carefully curated adventure trips.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="trips.html">Our Trips</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>
-                        <i class="fas fa-phone"></i> +91 1234567890<br>
-                        <i class="fas fa-envelope"></i> info@adventureexplorer.com<br>
-                        <i class="fas fa-map-marker-alt"></i> Mumbai, India
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Adventure Explorer. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get featured trips
-            const featuredTrips = [
-                trips.snowTreks[0],  // Brahmatal Trek
-                trips.summerEvents[0], // Dharamshala Retreat
-                trips.highlightedEvents[0] // Kuari Pass Trek
-            ];
-            
-            // Populate featured trips
-            const featuredGrid = document.getElementById('featured-trips');
-            featuredTrips.forEach(trip => {
-                const card = document.createElement('div');
-                card.className = 'trip-card';
-                
-                const nextDate = trip.dates[0]; // Get the next available date
-                
-                card.innerHTML = `
-                    <div class="trip-image">
-                        <img src="${trip.heroImage}" alt="${trip.title}">
-                        <h3 class="trip-title">${trip.title}</h3>
-                        <div class="trip-features">
-                            <span><i class="fas fa-bus"></i></span>
-                            <span><i class="fas fa-utensils"></i></span>
-                            <span><i class="fas fa-campground"></i></span>
-                            <span><i class="fas fa-hiking"></i></span>
-                            <span><i class="fas fa-camera"></i></span>
-                        </div>
-                    </div>
-                    <div class="trip-info">
-                        <div class="trip-details">
-                            <p class="trip-location"><i class="fas fa-map-marker-alt"></i> ${trip.location}</p>
-                            <p class="trip-duration"><i class="far fa-clock"></i> ${trip.duration}</p>
-                            <p class="trip-difficulty"><i class="fas fa-mountain"></i> ${trip.difficulty}</p>
-                        </div>
-                        <div class="trip-dates">
-                            <p class="next-date"><i class="far fa-calendar-alt"></i> Next Trip: ${nextDate}</p>
-                        </div>
-                        <div class="trip-price">
-                            <span class="price">₹${trip.price.toLocaleString()}</span>
-                            <span class="per-person">per person</span>
-                        </div>
-                        <a href="trip-details.html?id=${trip.id}" class="btn btn-secondary">View Details</a>
-                    </div>
-                `;
-                
-                featuredGrid.appendChild(card);
-            });
-        });
-    </script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 </html> 

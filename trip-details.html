@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trip Details - Adventure Explorer</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -286,47 +286,27 @@
         }
     </style>
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">Adventure Explorer</a>
-            </div>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="trips.html" class="active">Trips</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body data-page="trip-details">
+    <div id="site-nav"></div>
 
     <!-- Trip Hero -->
     <div class="trip-hero" id="trip-hero">
         <div class="trip-hero-content">
             <div class="container">
-                <h1 id="trip-title">Brahmatal Trek</h1>
-                <p id="trip-subtitle">Enjoy the Best Views of Mt Trishul and Mt Nanda Ghunti</p>
+                <h1 id="trip-title">Adventure Trip</h1>
+                <p id="trip-subtitle">India</p>
                 <div class="trip-meta">
                     <div class="trip-meta-item">
                         <i class="far fa-calendar"></i>
-                        <span id="trip-duration">5 days / 4 nights</span>
+                        <span id="trip-duration">—</span>
                     </div>
                     <div class="trip-meta-item">
                         <i class="fas fa-mountain"></i>
-                        <span id="trip-difficulty">Moderate</span>
+                        <span id="trip-difficulty">—</span>
                     </div>
                     <div class="trip-meta-item">
                         <i class="fas fa-users"></i>
-                        <span id="trip-age">15-35 years</span>
-                    </div>
-                    <div class="trip-meta-item">
-                        <i class="fas fa-arrow-up"></i>
-                        <span id="trip-altitude">12,250 ft</span>
+                        <span id="trip-group-size">—</span>
                     </div>
                 </div>
             </div>
@@ -345,127 +325,41 @@
                     
                     <div class="trip-highlights">
                         <h3>Trip Highlights</h3>
-                        <div class="highlights-list">
-                            <div class="highlight-item">
-                                <i class="fas fa-mountain"></i>
-                                <div>
-                                    <h4>Stunning Mountain Views</h4>
-                                    <p>Witness the majestic Himalayas including Mount Everest</p>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-home"></i>
-                                <div>
-                                    <h4>Local Culture</h4>
-                                    <p>Experience authentic Sherpa hospitality and traditions</p>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-camera"></i>
-                                <div>
-                                    <h4>Photography</h4>
-                                    <p>Capture incredible landscapes and cultural moments</p>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-hiking"></i>
-                                <div>
-                                    <h4>Adventure</h4>
-                                    <p>Challenge yourself on ancient mountain trails</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="highlights-list" id="highlights-list"></div>
+                    </div>
+
+                    <div class="trip-highlights" id="folk-tales-section" hidden>
+                        <h3>Local Folk Tales</h3>
+                        <ul id="folk-tales-list"></ul>
                     </div>
                     
                     <div class="trip-schedule">
-                        <h3>Itinerary</h3>
-                        <div class="schedule-item">
-                            <div class="schedule-day">Day 1: Arrival in Kathmandu</div>
-                            <p>Welcome to Nepal! Upon arrival at Tribhuvan International Airport, you'll be transferred to your hotel in Kathmandu. In the evening, we'll have a welcome dinner and trip briefing.</p>
-                        </div>
-                        <div class="schedule-item">
-                            <div class="schedule-day">Day 2: Kathmandu to Lukla</div>
-                            <p>Early morning flight to Lukla (2,860m), the gateway to the Everest region. After landing, we'll begin our trek to Phakding (2,610m), a small village on the banks of the Dudh Koshi River.</p>
-                        </div>
-                        <div class="schedule-item">
-                            <div class="schedule-day">Day 3: Phakding to Namche Bazaar</div>
-                            <p>Trek to Namche Bazaar (3,440m), the main trading center of the Khumbu region. The trail follows the Dudh Koshi River and crosses several suspension bridges.</p>
-                        </div>
-                        <div class="schedule-item">
-                            <div class="schedule-day">Day 4: Acclimatization Day</div>
-                            <p>Today is an acclimatization day in Namche Bazaar. We'll take a short hike to the Everest View Hotel for panoramic views of the Himalayas, including Mount Everest.</p>
-                        </div>
-                        <div class="schedule-item">
-                            <div class="schedule-day">Day 5: Namche Bazaar to Tengboche</div>
-                            <p>Trek to Tengboche (3,870m), home to the largest Buddhist monastery in the Khumbu region. The trail offers stunning views of Ama Dablam, Everest, and other peaks.</p>
-                        </div>
-                        <div class="schedule-item">
-                            <div class="schedule-day">Day 6: Tengboche to Dingboche</div>
-                            <p>Continue trekking to Dingboche (4,410m), a beautiful village surrounded by fields and mountains. The trail passes through forests and small settlements.</p>
-                        </div>
-                        <div class="schedule-item">
-                            <div class="schedule-day">Day 7: Acclimatization Day</div>
-                            <p>Another acclimatization day in Dingboche. We'll take a short hike to Nangkartshang Peak (5,083m) for panoramic views of the surrounding mountains.</p>
-                        </div>
-                        <div class="schedule-item">
-                            <div class="schedule-day">Day 8: Dingboche to Lobuche</div>
-                            <p>Trek to Lobuche (4,910m), a small settlement with stunning views of the Khumbu Glacier and surrounding peaks.</p>
-                        </div>
-                        <div class="schedule-item">
-                            <div class="schedule-day">Day 9: Lobuche to Gorak Shep and Kala Patthar</div>
-                            <p>Early morning trek to Gorak Shep (5,164m), the last settlement before Everest Base Camp. After lunch, we'll climb Kala Patthar (5,545m) for the best views of Mount Everest.</p>
-                        </div>
-                        <div class="schedule-item">
-                            <div class="schedule-day">Day 10: Return to Lukla and Kathmandu</div>
-                            <p>We'll trek back to Lukla and catch a flight back to Kathmandu. In the evening, we'll have a farewell dinner to celebrate our successful trek.</p>
-                        </div>
+                        <h3>Itinerary Highlights</h3>
+                        <div id="schedule-list"></div>
                     </div>
                     
                     <div class="trip-gallery">
                         <h3>Trip Gallery</h3>
-                        <div class="gallery-grid">
-                            <div class="gallery-item">
-                                <img src="images/gallery1.jpg" alt="Himalayan Trek">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/gallery2.jpg" alt="Himalayan Trek">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/gallery3.jpg" alt="Himalayan Trek">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/gallery4.jpg" alt="Himalayan Trek">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/gallery5.jpg" alt="Himalayan Trek">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/gallery6.jpg" alt="Himalayan Trek">
-                            </div>
-                        </div>
+                        <div class="gallery-grid" id="gallery-grid"></div>
                     </div>
                 </div>
                 
                 <div class="trip-sidebar">
                     <div class="booking-card">
                         <h3>Book This Trip</h3>
-                        <div class="price-tag">₹5,999</div>
+                        <div class="price-tag" id="price-tag">₹0</div>
                         <div class="booking-details">
                             <div class="booking-detail-item">
                                 <span>Duration</span>
-                                <span>5 days / 4 nights</span>
+                                <span id="sidebar-duration">—</span>
                             </div>
                             <div class="booking-detail-item">
-                                <span>Age</span>
-                                <span>15-35 years</span>
+                                <span>Group Size</span>
+                                <span id="sidebar-group-size">—</span>
                             </div>
                             <div class="booking-detail-item">
                                 <span>Difficulty</span>
-                                <span>Moderate</span>
-                            </div>
-                            <div class="booking-detail-item">
-                                <span>Altitude</span>
-                                <span>12,250 ft</span>
+                                <span id="sidebar-difficulty">—</span>
                             </div>
                             <div class="booking-detail-item">
                                 <span>Next Available Dates</span>
@@ -501,7 +395,7 @@
                             <div class="booking-summary">
                                 <div class="booking-summary-item">
                                     <span>Price per person</span>
-                                    <span>₹5,999</span>
+                                    <span id="price-per-person">₹0</span>
                                 </div>
                                 <div class="booking-summary-item">
                                     <span>Number of travelers</span>
@@ -509,7 +403,7 @@
                                 </div>
                                 <div class="booking-summary-item total">
                                     <span>Total Price</span>
-                                    <span id="total-price">₹5,999</span>
+                                    <span id="total-price">₹0</span>
                                 </div>
                             </div>
                             
@@ -521,7 +415,7 @@
                         <h3>Need Help?</h3>
                         <p>If you have any questions about this trip, feel free to contact us:</p>
                         <div style="margin-top: 20px;">
-                            <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                            <p><i class="fas fa-phone"></i> <span data-site-phone></span></p>
                             <p><i class="fas fa-envelope"></i> info@adventureexplorer.com</p>
                         </div>
                     </div>
@@ -530,145 +424,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Adventure Explorer</h3>
-                    <p>Discover the world with us. Your next adventure awaits.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="trips.html">Trips</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Adventure Street, Explorer City</p>
-                    <p><i class="fas fa-phone"></i> +91 1234567890</p>
-                    <p><i class="fas fa-envelope"></i> info@adventureexplorer.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Adventure Explorer. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
 
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get trip ID from URL
-            const urlParams = new URLSearchParams(window.location.search);
-            const tripId = urlParams.get('id');
-            
-            // Find the trip data
-            let trip;
-            for (let category in trips) {
-                trip = trips[category].find(t => t.id === tripId);
-                if (trip) break;
-            }
-            
-            if (!trip) {
-                trip = trips.snowTreks[0]; // Default to first snow trek if ID not found
-            }
-            
-            // Update page content
-            document.getElementById('trip-title').textContent = trip.title;
-            document.getElementById('trip-description').textContent = trip.description;
-            document.getElementById('trip-hero').style.backgroundImage = `url(${trip.heroImage})`;
-            document.getElementById('trip-duration').textContent = trip.duration;
-            document.getElementById('trip-difficulty').textContent = trip.difficulty;
-            
-            // Show next available dates
-            document.getElementById('next-dates').textContent = trip.dates[0];
-            
-            // Populate attractions
-            const attractionsGrid = document.getElementById('attractions-grid');
-            if (trip.highlights) {
-                trip.highlights.forEach(highlight => {
-                    const card = document.createElement('div');
-                    card.className = 'attraction-card';
-                    card.innerHTML = `
-                        <img src="images/attractions/${highlight.toLowerCase().replace(/\s+/g, '-')}.jpg" 
-                             alt="${highlight}" 
-                             onerror="this.src='images/placeholder.jpg'">
-                        <h3>${highlight}</h3>
-                    `;
-                    attractionsGrid.appendChild(card);
-                });
-            }
-            
-            // Populate schedule
-            const scheduleTimeline = document.getElementById('schedule-timeline');
-            const days = [
-                {
-                    title: "Reporting at Lohajung Campsite",
-                    description: "Arrival at Campsite, Brifing & Acclimatization"
-                },
-                {
-                    title: "Trek to Bekaltal",
-                    description: "Night stay at Bekaltal Campsite"
-                },
-                {
-                    title: "Trek to Brahmatal",
-                    description: "Visit Zandi Top & Night stay at Brahmatal Campsite"
-                },
-                {
-                    title: "Trek to Brahmatal Top",
-                    description: "Night Stay at Bekaltal Campsite"
-                },
-                {
-                    title: "Trek Back to Lohajung & Disperse",
-                    description: "Disperse after Lunch from Campsite"
-                }
-            ];
-            
-            days.forEach((day, index) => {
-                const item = document.createElement('div');
-                item.className = 'schedule-item';
-                item.innerHTML = `
-                    <h3>${day.title}</h3>
-                    <p>${day.description}</p>
-                    <a href="#" class="know-more">
-                        Know more
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                `;
-                scheduleTimeline.appendChild(item);
-            });
-            
-            // Handle booking form
-            const travelersSelect = document.getElementById('travelers');
-            const travelersCount = document.getElementById('travelers-count');
-            const totalPrice = document.getElementById('total-price');
-            const bookingForm = document.getElementById('booking-form');
-            
-            travelersSelect.addEventListener('change', function() {
-                const count = parseInt(this.value) || 1;
-                travelersCount.textContent = count;
-                totalPrice.textContent = `₹${(trip.price * count).toLocaleString()}`;
-            });
-            
-            bookingForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Booking submitted successfully! We will contact you shortly to confirm your reservation.');
-                this.reset();
-                travelersCount.textContent = '1';
-                totalPrice.textContent = `₹${trip.price.toLocaleString()}`;
-            });
-        });
-    </script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 </html> 
