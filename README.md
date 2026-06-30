@@ -36,12 +36,19 @@ adventure-explorer-hackiiitv/
 
 ## Deploy (GitHub Pages)
 
-Pushes to `main` deploy automatically via GitHub Actions.
+Pushes to `main` publish the site to the `gh-pages` branch automatically.
 
-1. In the repo on GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**
-2. After the workflow runs, the site is live at:
+**One-time setup on GitHub:**
+1. Open **Settings → Pages**
+2. **Source:** Deploy from a branch
+3. **Branch:** `gh-pages` → `/ (root)` → Save
 
-   `https://neev-25.github.io/adventure-explorer-hackiiitv/`
+**Live URLs:**
+- Home: https://neev-25.github.io/adventure-explorer-hackiiitv/
+- About: https://neev-25.github.io/adventure-explorer-hackiiitv/about.html
+- Contact: https://neev-25.github.io/adventure-explorer-hackiiitv/contact.html
+
+Primary pages: `index.html`, `about.html`, `contact.html`
 
 ## Run Locally
 
